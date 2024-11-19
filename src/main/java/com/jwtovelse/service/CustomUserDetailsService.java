@@ -1,7 +1,7 @@
 package com.jwtovelse.service;
 
 
-
+import com.jwtovelse.entity.User;
 import com.jwtovelse.repository.UserRepository;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -40,6 +40,9 @@ public class CustomUserDetailsService implements UserDetailsService {
         return userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found: " + username));
     }
-}
 
+    public void saveUser(User user) {
+        userRepository.save(user);
+    }
+}
 
