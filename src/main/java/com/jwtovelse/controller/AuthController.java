@@ -42,20 +42,26 @@ public class AuthController {
             HttpServletResponse response
     ) {
         try {
-            Authentication authenticate = authenticationManager.authenticate(
+            // Authenticate the user (this checks the credentials against the UserDetailsService)
+            authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(username, password)
             );
+
+            // If authentication is successful, generate the JWT token
             String token = jwtUtil.generateToken(username);
 
             // Store the JWT token in an HTTP-only cookie
             Cookie cookie = new Cookie("jwtToken", token);
             cookie.setHttpOnly(true);
             cookie.setPath("/");
-            cookie.setMaxAge(60 * 60); // 1 hour
+            cookie.setMaxAge(60 * 60); // Token will expire in 1 hour
             response.addCookie(cookie);
 
+            // Redirect the user to the home page
             return "redirect:/home";
+
         } catch (AuthenticationException e) {
+            // If authentication fails, redirect to login page with error
             return "redirect:/login?error=true";
         }
     }
