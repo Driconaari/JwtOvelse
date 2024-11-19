@@ -1,4 +1,4 @@
-package com.flower.shop.jwtovelse;
+package com.jwtovelse;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

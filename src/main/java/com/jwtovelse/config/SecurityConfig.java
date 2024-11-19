@@ -1,4 +1,4 @@
-package com.flower.shop.jwtovelse.config;
+package com.jwtovelse.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

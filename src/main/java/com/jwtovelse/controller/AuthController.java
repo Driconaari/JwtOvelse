@@ -1,4 +1,4 @@
-package com.flower.shop.jwtovelse.controller;
+package com.jwtovelse.controller;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.stereotype.Controller;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
+import com.flower.shop.jwtovelse.util.JwtUtil;
+
 
 @Controller
 public class AuthController {
