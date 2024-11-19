@@ -1,5 +1,7 @@
 package com.jwtovelse.config;
 
+import com.jwtovelse.Service.CustomUserDetailsService;
+import com.jwtovelse.util.JwtAuthFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

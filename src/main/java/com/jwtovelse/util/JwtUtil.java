@@ -1,4 +1,4 @@
-package com.jwtovelse.Utility;
+package com.jwtovelse.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

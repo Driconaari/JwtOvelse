@@ -13,16 +13,14 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        // Here, replace with actual logic to fetch user details from a database or other source
+        // Replace this logic with actual database query
         if ("user".equals(username)) {
             return new User(
                     "user",
-                    "{noop}password", // Use a password encoder in production
-                    new ArrayList<>() // Add roles or authorities if needed
+                    "{noop}password", // Use password encoder for real apps
+                    new ArrayList<>()
             );
-        } else {
-            throw new UsernameNotFoundException("User not found");
         }
+        throw new UsernameNotFoundException("User not found");
     }
 }
-

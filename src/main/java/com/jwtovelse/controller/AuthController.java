@@ -1,6 +1,6 @@
 package com.jwtovelse.controller;
 
-import com.jwtovelse.Utility.JwtUtil;
+import com.jwtovelse.util.JwtUtil;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
