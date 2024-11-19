@@ -9,7 +9,11 @@ import java.util.Date;
 
 @Component
 public class JwtUtil {
-    private static final String SECRET_KEY = "yourSecretKey";
+    // this is a test method, Change this to your own secret key
+   // private static final String SECRET_KEY = "yourSecretKey";
+
+    // this is the secret key for the jwt token that is stored in the environment variable
+    private static final String SECRET_KEY = System.getenv("JWT_SECRET_KEY");
     private static final long EXPIRATION_TIME = 1000 * 60 * 60; // 1 hour
 
     public String generateToken(String username) {
